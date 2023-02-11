@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>文件下载</title>
+</head>
+<body>
+<!-- 浏览器可以识别的,点击查看内容，不会下载 -->
+    <a href="download/test.txt">文本文件</a>
+    <a href="download/2.png">文本图片</a>
+<!-- 浏览器不能识别的，点击会直接下载 -->
+    <a href="download/test.zip">压缩文件</a>
+    <hr>
+<!-- 加入download属性可以进行下载，属性值内容为下载的文件名 -->
+    <a href="download/test.txt" download>文本文件</a>
+    <a href="download/2.png" download="图片">文本图片</a>
+    <hr>
+<!-- 后台实现下载 -->
+    <form action="ul02">
+        文件名：<input type="text" name="fileName" placeholder="请输入下载的文件名">
+        <button>下载</button>
+    </form>
+
+</body>
+</html>
